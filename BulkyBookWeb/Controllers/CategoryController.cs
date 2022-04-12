@@ -14,6 +14,7 @@ namespace BulkyBookWeb.Controllers
             _db = db;
         }
 
+        //list results from db
         public IActionResult Index()
         {
             IEnumerable<Category> objCategoryList = _db.Categories;
@@ -87,6 +88,7 @@ namespace BulkyBookWeb.Controllers
 
         }
         
+        //search db for specific record
         public async Task<IActionResult> Search(string search)
         {
 
